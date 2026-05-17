@@ -1,0 +1,16 @@
+<nz-calendar [nzDateCell]="dateCell">
+  <ng-template #dateCell let-date>
+    <ul class="events">
+      @for (event of getEventsForDate(date); track event.title) {
+        <li>
+          <strong>{{ event.title }}</strong><br>
+          <span>
+            {{ event.startDate | date:'h:mm a' }}
+            –
+            {{ event.endDate | date:'h:mm a' }}
+          </span>
+        </li>
+      }
+    </ul>
+  </ng-template>
+</nz-calendar>
