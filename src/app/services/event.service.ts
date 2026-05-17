@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 export interface CalendarEvent {
   startDate: string;
@@ -13,7 +13,19 @@ export interface CalendarEvent {
 export class EventService {
   constructor(private http: HttpClient) {}
 
-  getEvents(): Observable<CalendarEvent[]> {
+  getAllEvents(): Observable<CalendarEvent[]> {
     return this.http.get<CalendarEvent[]>('/assets/events.json');
+  }
+
+  getUpcomingEvents(count: number): Observable<CalendarEvent[]> {
+    const now = new Date();
+    
+    return this.http.get<CalendarEvent[]>('/assets/events.json').pipe(
+      map(events => events
+        .filter(event => new Date(event.startDate) >= now)
+        .sort((a: CalendarEvent, b: CalendarEvent) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())
+        .slice(0, count)
+      )
+    );
   }
 }

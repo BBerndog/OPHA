@@ -1,0 +1,22 @@
+<div class="events-container">
+  <h3>Upcoming Events</h3>
+
+  <div *ngFor="let event of events()" class="event-item">
+    <div class="event-date">
+      {{ formatDate(event.startDate) }}
+    </div>
+
+    <div class="event-details">
+      <div class="event-title">
+        {{ event.title }}
+      </div>
+      <div class="event-time">
+        {{ formatTimeRange(event.startDate, event.endDate) }}
+      </div>
+    </div>
+  </div>
+
+  <a routerLink="/calendar" class="calendar-link">
+    View Full Calendar →
+  </a>
+</div>

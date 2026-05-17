@@ -18,7 +18,7 @@ export class Calendar {
 
   constructor() {
     effect(() => {
-      this.eventService.getEvents().subscribe(events => {
+      this.eventService.getAllEvents().subscribe(events => {
         this.events.set(events);
       });
     });
