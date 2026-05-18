@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"covenant": "Fully Protective Residential Area",
+		"description": "The following covenants shall apply to all lots in Oak Park Subdivision."
+	},
+	{
+		"id": 2,
+		"covenant": "Homesite Use",
+		"description": "No portion of said real estate shall be used for any purpose other than single family residential dwellings, nor shall any lot be further subdivided."
+	},
+	{
+		"id": 3,
+		"covenant": "Dwelling",
+		"description": "The ground floor of the main structure, exclusive of porches and garages, shall NOT be less than Two Thousand (2000) square feet in the case of one story structures, nor less than One thousand (1000) square feet of finished floor area in such multiple story structures, with no less than Two Thousand (2000) square feet of finished floor are in such multiple story structures. (Determination of sufficiency and adequacy of the term \"ground floor of main structure\" with respect to dwellings of tri-level, bi-level and one-and-one-half story design shall rest exclusively with the Architectural Control Committee, as defined in Paragraph 4). Basements, either finished or unfinished, shall not be included in square footage calculations. In addition to the above square footage requirements, each structure shall have either an attached or detached garage structure of no less than Four Hundred Forty (440) square feet in size, which is in conforming finish and design with the main structure. No building site is permitted to have both an attached and detached garage. All building locations and elevations must comply with the plat and Hendricks County and Plainfield regulations. The exterior walls of a single story residence (and any detached garage) must be constructed with at least eighty-five percent (85%) of the exterior wall covered with brick or stone veneer. Multiple story structures shall have one hundred percent (100%) of the first floor covered with brick or stone veneer. The above brick requirements also apply to the portion of the residence facing any porches. No Aluminum or vinyl siding (except for hte soffit areas) is permitted."
+	},
+	{
+		"id": 4,
+		"covenant": "Architectural Design",
+		"description": "No building, or any other structure, shall be erected, placed or altered on any lot in this subdivision until the plans, specifications and plot plan showing the location of such building has been approved by an Architectural Control Committee (the \"Committee\") comprised of the undersigned owners, or by their duly authorized representatives. The Committee's approval or disapproval, as required in these Covenants, shall be in writing. In the event that said written approval is NOT received from the Committee within twenty (20) days from the date of submission, it shall be deemed that the Committe has DISAPPROVED the presented plan."
+	}
+]
