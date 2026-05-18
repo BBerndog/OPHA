@@ -1,8 +1,6 @@
 <div class="covenants-container">
   <div class="shared-title">Covenants</div>
-  <a nz-dropdown [nzDropdownMenu]="menu" nzTrigger="click" class="covenants-dropdown">
-    View Covenants →
-  </a>
+  <button nz-dropdown [nzDropdownMenu]="menu" nzTrigger="click" class="covenants-dropdown">Select Covenant <span nz-icon nzType="down"></span></button>
   <nz-dropdown-menu #menu="nzDropdownMenu">
     <ul nz-menu nzSelectable>
       <li nz-menu-item *ngFor="let covenant of covenants()">
@@ -14,21 +12,9 @@
     <div>
       {{ covenant.covenant }}
     </div>
-
-    <!--div class="event-details">
-      <div class="event-title">
-        {{ event.title }}
-      </div>
-			<div class="event-location">
-				{{ event.location }}
-			</div>
-      <div class="event-time">
-        {{ formatTimeRange(event.startDate, event.endDate) }}
-      </div>
-    </div-->
   </div>
 
-  <a routerLink="/covenants">
+  <a routerLink="/restrictions">
     View All Covenants →
   </a>
 </div>

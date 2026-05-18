@@ -18,5 +18,15 @@
 		"id": 4,
 		"covenant": "Architectural Design",
 		"description": "No building, or any other structure, shall be erected, placed or altered on any lot in this subdivision until the plans, specifications and plot plan showing the location of such building has been approved by an Architectural Control Committee (the \"Committee\") comprised of the undersigned owners, or by their duly authorized representatives. The Committee's approval or disapproval, as required in these Covenants, shall be in writing. In the event that said written approval is NOT received from the Committee within twenty (20) days from the date of submission, it shall be deemed that the Committe has DISAPPROVED the presented plan."
+	},
+	{
+		"id": 5,
+		"covenant": "Building Location",
+		"description": "Front yard set back lines and side yard set back lines on corner lots are shown on the plat, between which lines and the property lines of the street there shall be no buildings or structures of any kind erected or maintained. Side yard set back lines on all other lots shall be ten (10) feet unless Hendricks County of Plainfield zoning regulations require a larger set back distance."
+	},
+	{
+		"id": 6,
+		"covenant": "Drainage and Utility Basements",
+		"description": "The strips of ground marked \"Utility\" easements are hereby reserved for the use of public utilities subject at all times to the proper authorities and to the easements herein granted and reserved. The drainage easements reserved as drainage swales may be used by the proper authorities and are the be maintained by an owner such that adequate drainage is maintained along such swale. Whenever practical, any lot owner should attempt to keep street drains clear of leaves and other debris in order to maintain a safe and attractive environment. All utility easements are also subject to all restrictions of drainage easements. No permanent or other structure are to be erected or maintained upon any easement shown upon the plat and owners of lots shall take their titles subject to the rights of the above easements. No sump pump may be discharged into the street after a house is completed. The discharge of a sump pump must be installed underground with plastic pipe or vitrified tile to subsurface drains or approved drainage swales. In order to ensure the proper operation of the drainage system, No dumping of any material into the drainage swales is permitted, including but not limited to leaves, grass clippings, dirt, stones, trash or any other items."
 	}
 ]
