@@ -3,18 +3,20 @@
   <button nz-dropdown [nzDropdownMenu]="menu" nzTrigger="click" class="covenants-dropdown">Select Covenant <span nz-icon nzType="down"></span></button>
   <nz-dropdown-menu #menu="nzDropdownMenu">
     <ul nz-menu nzSelectable>
-      <li nz-menu-item *ngFor="let covenant of covenants()">
+      <li nz-menu-item *ngFor="let covenant of covenants()" (click)="selectCovenant(covenant)">
         {{ covenant.covenant }}
       </li>
     </ul>
   </nz-dropdown-menu>
-  <div *ngFor="let covenant of covenants()" class="covenant-item">
-    <div>
-      {{ covenant.covenant }}
-    </div>
+
+  <div *ngIf="selectedCovenant()" class="selected-covenant">
+    <div class="covenant-name">{{ selectedCovenant()!.covenant }}</div>
+    <div class="covenant-description">{{ selectedCovenant()!.description }}</div>
   </div>
 
-  <a routerLink="/restrictions">
-    View All Covenants →
-  </a>
+  <div class="shared-link">
+    <a routerLink="/restrictions">
+      View All Covenants →
+    </a>
+  </div>
 </div>

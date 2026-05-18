@@ -1,0 +1,13 @@
+<div class="page-title">General Information</div>
+<nz-tabs nzType="card" [(nzSelectedIndex)]="selectedIndex" (nzSelectedIndexChange)="onTabIndexChange($event)">
+	<nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
+		<ng-template #titleTemplate>
+			<nz-icon [nzType]="tab.icon" />
+			{{ tab.name }}
+		</ng-template>
+	</nz-tab>
+</nz-tabs>
+
+<div class="info-content" *ngIf="selectedContent">
+  <div [innerHTML]="selectedContent"></div>
+</div>

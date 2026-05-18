@@ -2,7 +2,6 @@
   text-align: center;
   max-width: 800px;       /* keeps text readable */
   margin: 0 auto;         /* centers the whole block */
-  padding: .1rem .1rem;     /* breathing room */
 }
 
 .logo-image {
@@ -10,7 +9,7 @@
   max-width: 40vw;        /* responsive on mobile */
   height: auto;
   display: block;
-  margin: 0 auto .1rem;    /* center + spacing below */
+  margin: 0 auto 0;    /* center + spacing below */
 }
 
 .welcome {

@@ -7,7 +7,7 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { en_US, provideNzI18n } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import { provideNzIcons } from 'ng-zorro-antd/icon';
-import { HomeOutline, FileTextOutline, CalendarOutline, TeamOutline, NotificationOutline } from '@ant-design/icons-angular/icons';
+import { ScheduleOutline, MailOutline, HomeOutline, FileTextOutline, CalendarOutline, TeamOutline, NotificationOutline } from '@ant-design/icons-angular/icons';
 import en from '@angular/common/locales/en';
 
 registerLocaleData(en);
@@ -19,6 +19,6 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideClientHydration(withEventReplay()),
     provideNzI18n(en_US),
-    provideNzIcons([HomeOutline, FileTextOutline, CalendarOutline, TeamOutline, NotificationOutline]),
+    provideNzIcons([ScheduleOutline, MailOutline, HomeOutline, FileTextOutline, CalendarOutline, TeamOutline, NotificationOutline]),
   ],
 };

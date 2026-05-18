@@ -1,3 +1,24 @@
 .covenants-container {
 	padding: 1rem;
 }
+
+.selected-covenant {
+  margin-top: 1rem;
+  padding: .4rem;
+  background: #f9f9f9;
+  border-left: 4px solid #C9A227;
+}
+
+.covenant-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #000;
+}
+
+.covenant-description {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #333;
+	text-align: justify;
+}

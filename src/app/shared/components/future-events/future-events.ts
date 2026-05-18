@@ -1,7 +1,6 @@
-import { Component, effect, inject, Input } from '@angular/core';
+import { Component, effect, inject, Input, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { signal } from '@angular/core';
 import { EventService, CalendarEvent } from '../../../services/event.service';
 
 @Component({

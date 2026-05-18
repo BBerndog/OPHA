@@ -1,0 +1,30 @@
+<div class="news-list">
+  <div class="shared-title">News</div>
+
+  <!-- Empty state -->
+  <div *ngIf="headlines().length === 0" class="news-empty">
+    There are currently no recent news items.
+  </div>
+
+  <!-- News items -->
+  <div class="news-item" *ngFor="let item of headlines()">
+    <div class="news-headline">
+      <a *ngIf="item.link" [href]="item.link" target="_blank">
+        {{ item.headline }}
+      </a>
+      <span *ngIf="!item.link">
+        {{ item.headline }}
+      </span>
+    </div>
+
+    <div class="news-date">
+      {{ item.date | date:'MMMM d, y' }}
+    </div>
+  </div>
+
+  <div class="shared-link">
+    <a routerLink="/news">
+      View All News →
+    </a>
+  </div>
+</div>
