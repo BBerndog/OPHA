@@ -1,0 +1,38 @@
+[
+  {
+    "title": "President",
+    "name": "Bill Munson",
+    "email": "bill.munson@example.com",
+    "phone": "555-123-4567"
+  },
+	{
+		"title": "Treasurer",
+		"name": "Wes Livingston",
+		"email": "",
+		"phone": ""
+	},
+	{
+		"title": "Secretary",
+		"name": "Linda Shore",
+		"email": "",
+		"phone": ""
+	},
+	{
+		"title": "Board of Directors",
+		"name": "Larry Edwards",
+		"email": "",
+		"phone": ""
+	},
+	{
+		"title": "Board of Directors",
+		"name": "Larry Good",
+		"email": "",
+		"phone": ""
+	},
+	{
+		"title": "Architectural Review Committee",
+		"name": "Brad Bernhardt",
+		"email": "",
+		"phone": ""
+	}
+]
