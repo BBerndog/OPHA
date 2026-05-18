@@ -1,0 +1,14 @@
+.member-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.member-title {
+  font-weight: 600; /* bold */
+}
+
+.member-name {
+  text-align: right;
+}

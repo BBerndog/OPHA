@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
@@ -11,11 +11,12 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
   imports: [
     RouterOutlet,
     RouterLink,
+    RouterLinkActive,
 		NzLayoutModule,
 		NzMenuModule,
 		NzIconModule
 	],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
+  styleUrls: ['./app.scss'],
 })
 export class App {}

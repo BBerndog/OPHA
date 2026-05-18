@@ -65,8 +65,28 @@ nz-content {
   flex: 1;
 }
 
-nz-header {
-	padding: 0px;
+.app-header,
+nz-header.app-header,
+.ant-layout-header.app-header {
+  position: relative;
+  padding: 0px !important;
+  border-bottom: none !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16) !important;
+  z-index: 10;
+}
+
+.app-header::after,
+nz-header.app-header::after,
+.ant-layout-header.app-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: #C9A227;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+  pointer-events: none;
 }
 
 .inner-content {

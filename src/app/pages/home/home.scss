@@ -2,17 +2,18 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 420px);
   justify-content: center;
-  gap: 1rem;
+  align-items: start;
+  gap: 2rem;
   padding: 1rem;
 }
 
 .tile-grid > * {
   max-width: 420px;   /* keeps tiles from getting too wide */
-  width: 400px;        /* allows them to shrink but not stretch */
+  width: 420px;        /* allows them to shrink but not stretch */
   margin: 0 auto;     /* centers each tile */
   background: #fff;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 

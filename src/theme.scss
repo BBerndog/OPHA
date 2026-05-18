@@ -1,0 +1,23 @@
+.shared-tile {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  padding: 1rem; /* content padding */
+  position: relative; /* allows header to sit on top */
+  height: fit-content;
+}
+
+.shared-title {
+  background-color: #C9A227; /* gold */
+  color: #000;
+  padding: 0.75rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-bottom: 3px solid #000;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  /* This is the key: remove the tile padding effect */
+  margin: -1rem -1rem 1rem -1rem;
+  height: auto;
+}

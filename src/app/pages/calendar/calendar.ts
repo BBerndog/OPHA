@@ -10,7 +10,7 @@ import { EventService, CalendarEvent } from '../../services/event.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NzCalendarComponent, DatePipe],
   templateUrl: './calendar.html',
-  styleUrl: './calendar.scss',
+  styleUrls: ['./calendar.scss'],
 })
 export class Calendar {
   private eventService = inject(EventService);

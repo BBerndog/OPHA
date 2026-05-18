@@ -2,14 +2,14 @@ import { Component, effect, inject, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { signal } from '@angular/core';
-import { EventService, CalendarEvent } from '../../services/event.service';
+import { EventService, CalendarEvent } from '../../../services/event.service';
 
 @Component({
   standalone: true,
   selector: 'app-future-events',
   imports: [CommonModule, RouterModule],
   templateUrl: './future-events.html',
-  styleUrl: './future-events.scss',
+  styleUrls: ['./future-events.scss'],
 })
 export class FutureEvents {
   private eventService = inject(EventService);

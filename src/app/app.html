@@ -1,21 +1,21 @@
 <nz-layout>
-  <nz-header>
+  <nz-header class="app-header">
 		<div class="logo-container">
       <img src="/OakParkLogo.png" class="logo" alt="Oak Park HOA Logo">
     </div>
     <div class="logo">Oak Park HOA</div>
 		<ul nz-menu nzTheme="dark" nzMode="horizontal">
-			<li nz-menu-item routerLink="/"><span nz-icon nzType="home"></span>Home</li>
+			<li nz-menu-item routerLink="/home" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="home"></span>Home</li>
 			<li nz-submenu nzTitle="Documents" nzIcon="down">
 				<ul>
-					<li nz-menu-item routerLink="/documents/bylaws"><span nz-icon nzType="file-text"></span>Restrictive Covenants</li>
-					<li nz-menu-item routerLink="/documents/minutes"><span nz-icon nzType="file-text"></span>First Covenant Amendment</li>
-					<li nz-menu-item routerLink="/documents/forms"><span nz-icon nzType="file-text"></span>Bylaws</li>
-					<li nz-menu-item routerLink="/documents/other"><span nz-icon nzType="file-text"></span>Rental Ban Agreement</li>
+					<li nz-menu-item routerLink="/documents/bylaws" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="file-text"></span>Restrictive Covenants</li>
+					<li nz-menu-item routerLink="/documents/minutes" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="file-text"></span>First Covenant Amendment</li>
+					<li nz-menu-item routerLink="/documents/forms" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="file-text"></span>Bylaws</li>
+					<li nz-menu-item routerLink="/documents/other" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="file-text"></span>Rental Ban Agreement</li>
 				</ul>
 			</li>
-			<li nz-menu-item routerLink="/calendar"><span nz-icon nzType="calendar"></span>Calendar</li>
-			<li nz-menu-item routerLink="/contacts"><span nz-icon nzType="team"></span>Contacts</li>
+			<li nz-menu-item routerLink="/calendar" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="calendar"></span>Calendar</li>
+			<li nz-menu-item routerLink="/contacts" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="team"></span>Contacts</li>
 		</ul>
   </nz-header>
   <nz-content style="padding: 24px;">

@@ -6,13 +6,13 @@
     "phone": "555-123-4567"
   },
 	{
-		"title": "Treasurer",
+		"title": "Treasurer/Board of Directors",
 		"name": "Wes Livingston",
 		"email": "",
 		"phone": ""
 	},
 	{
-		"title": "Secretary",
+		"title": "Secretary/Board of Directors",
 		"name": "Linda Shore",
 		"email": "",
 		"phone": ""
@@ -32,6 +32,18 @@
 	{
 		"title": "Architectural Review Committee",
 		"name": "Brad Bernhardt",
+		"email": "",
+		"phone": ""
+	},
+	{
+		"title": "Entrace Upkeep Committee",
+		"name": "",
+		"email": "",
+		"phone": ""
+	},
+	{
+		"title": "Community Events Committee",
+		"name": "Donna Hall",
 		"email": "",
 		"phone": ""
 	}
