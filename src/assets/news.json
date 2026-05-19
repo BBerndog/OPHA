@@ -1,3 +1,20 @@
 [
-
+	{
+		"headline": "New Covenant Dropdown Component",
+		"date": "2026-06-15",
+		"link": "https://example.com/new-covenant-dropdown",
+		"description": "Added a new dropdown component to display covenants with descriptions and a link to view all covenants."
+	},
+	{
+		"headline": "Added General Information Page",
+		"date": "2026-06-10",
+		"link": "https://example.com/general-information-page",
+		"description": "Created a new page to display general information about the community."
+	},
+	{
+		"headline": "Updated Theme Styles",
+		"date": "2026-06-05",
+		"link": "https://example.com/updated-theme-styles",
+		"description": "Updated the theme styles to improve the visual appearance of the application."
+	}
 ]

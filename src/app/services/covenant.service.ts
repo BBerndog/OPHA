@@ -6,6 +6,7 @@ export interface Covenant {
 	id: number;
 	covenant: string;
 	description: string;
+	descriptionUrl?: string;
 }
 
 @Injectable({ providedIn: 'root' })

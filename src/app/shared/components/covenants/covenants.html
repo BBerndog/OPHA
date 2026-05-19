@@ -11,7 +11,7 @@
 
   <div *ngIf="selectedCovenant()" class="selected-covenant">
     <div class="covenant-name">{{ selectedCovenant()!.covenant }}</div>
-    <div class="covenant-description">{{ selectedCovenant()!.description }}</div>
+    <div class="covenant-description" [innerHTML]="selectedContent()"></div>
   </div>
 
   <div class="shared-link">
