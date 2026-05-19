@@ -3,7 +3,7 @@
 }
 
 .selected-covenant {
-  margin-top: 1rem;
+  margin-top: .3rem;
   padding: .4rem;
   background: #f9f9f9;
   border-left: 4px solid #C9A227;
@@ -12,7 +12,7 @@
 .covenant-name {
   font-weight: 600;
   font-size: 1rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   color: #000;
 }
 
@@ -21,4 +21,19 @@
   line-height: 1.5;
   color: #333;
 	text-align: justify;
+}
+
+.covenants-dropdown,
+.nz-select-selector {
+  background: #fff;
+  border: 1px solid #C9A227; /* gold */
+  border-radius: 6px;
+  padding: 1px 10px;
+  color: #116E3A;
+	margin-bottom: .6rem;
+}
+
+.nz-select-arrow,
+.covenants-dropdown span[nz-icon] {
+  color: #C9A227; /* gold arrow */
 }
