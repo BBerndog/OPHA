@@ -1,28 +1,27 @@
 <div class="covenants-container">
   <div class="shared-title">Covenants</div>
-  <button nz-dropdown [nzDropdownMenu]="menu" nzTrigger="click" class="covenants-dropdown">Select Covenant <span nz-icon nzType="down"></span></button>
-  <nz-dropdown-menu #menu="nzDropdownMenu">
-    <ul nz-menu nzSelectable>
-      <li nz-menu-item *ngFor="let covenant of covenants()" (click)="selectCovenant(covenant)">
-        {{ covenant.covenant }}
-      </li>
-    </ul>
-  </nz-dropdown-menu>
-
-  <div *ngIf="selectedCovenant()" class="selected-covenant">
-    <div class="covenant-name">{{ selectedCovenant()!.covenant }}</div>
-			<!--div class="covenant-description" [innerHTML]="selectedContent()"></div-->
-			<!-- If no subsections, show full content -->
-			<div *ngIf="sections().length === 0"
-					class="covenant-description"
-					[innerHTML]="selectedContent()">
-			</div>
-			<!-- If subsections exist -->
-			<div *ngIf="sections().length > 0">
+	<button nz-dropdown [nzDropdownMenu]="menu" nzTrigger="click" class="covenants-dropdown">Select Covenant <span nz-icon nzType="down"></span></button>
+	<nz-dropdown-menu #menu="nzDropdownMenu">
+		<ul nz-menu nzSelectable>
+			<li nz-menu-item *ngFor="let covenant of covenants()" (click)="selectCovenant(covenant)">
+				{{ covenant.covenant }}
+			</li>
+		</ul>
+	</nz-dropdown-menu>
+	<div *ngIf="selectedCovenant()" class="selected-covenant">
+		<div class="covenant-name">{{ selectedCovenant()!.covenant }}</div>
+		<!--div class="covenant-description" [innerHTML]="selectedContent()"></div-->
+		<!-- If no subsections, show full content -->
+		<div *ngIf="sections().length === 0"
+			class="covenant-description"
+			[innerHTML]="selectedContent()">
+		</div>
+		<!-- If subsections exist -->
+		<div *ngIf="sections().length > 0">
 			<button nz-dropdown 
-							[nzDropdownMenu]="sectionMenu" 
-							nzTrigger="click" 
-							class="covenants-dropdown">
+				[nzDropdownMenu]="sectionMenu" 
+				nzTrigger="click" 
+				class="covenants-dropdown">
 				<ng-container *ngIf="selectedSectionIndex() !== null">
 					Section {{ sections()[selectedSectionIndex()!].id.toUpperCase() }}
 				</ng-container>
@@ -31,22 +30,19 @@
 			<nz-dropdown-menu #sectionMenu="nzDropdownMenu">
 				<ul nz-menu nzSelectable>
 					<li nz-menu-item 
-							*ngFor="let s of sections(); let i = index"
-							(click)="selectedSectionIndex.set(i)">
+						*ngFor="let s of sections(); let i = index"
+						(click)="selectSection(i)">
 						Section {{ s.id.toUpperCase() }}
 					</li>
 				</ul>
 			</nz-dropdown-menu>
-			<ng-container *ngIf="selectedSectionIndex() as idx">
-				<div class="covenant-description"
-					[innerHTML]="sections()[idx]?.html">
-				</div>
-			</ng-container>
+			<div class="covenant-description" [innerHTML]="sections()[selectedSectionIndex() ?? 0]?.html">
+			</div>
 		</div>
-  </div>
-  <div class="shared-link">
-    <a routerLink="/restrictions">
-      View All Covenants →
-    </a>
+	</div>
+	<div class="shared-link">
+		<a routerLink="/restrictions">
+			View All Covenants →
+		</a>
   </div>
 </div>
