@@ -22,7 +22,7 @@ export class Restrictions {
   
   covenants = signal<Covenant[]>([]);
   tabs: Array<{ name: string; disabled: boolean }> = [];
-  nzTabPosition: NzTabPosition = 'top';
+  nzTabPosition: NzTabPosition = 'left';
   selectedIndex = 0;
   selectedContent = signal<SafeHtml | null>(null);
 

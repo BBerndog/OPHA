@@ -1,10 +1,4 @@
 <div class="page-title">Covenants and Bylaws</div>
-<nz-radio-group [(ngModel)]="nzTabPosition" style="margin-bottom: 8px;">
-	<label nz-radio-button nzValue="top">Horizontal</label>
-	<label nz-radio-button nzValue="left">Vertical</label>
-</nz-radio-group>
-<nz-input-number style="float:right;" [nzMin]="0" [nzMax]="25" [(ngModel)]="selectedIndex" />
-
 <nz-tabs
 	style="height:100%;"
 	[nzTabPosition]="nzTabPosition"
@@ -22,9 +16,9 @@
 		(nzContextmenu)="log(['contextmenu', tab])"
 		(nzDeselect)="log(['deselect', tab])"
 	>
+		<div class="covenant-content" *ngIf="selectedContent()">
+			<div [innerHTML]="selectedContent()"></div>
+		</div>
 	</nz-tab>
 </nz-tabs>
 
-<div class="covenant-content" *ngIf="selectedContent()">
-	<div [innerHTML]="selectedContent()"></div>
-</div>
