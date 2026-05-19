@@ -6,11 +6,13 @@ import { Covenant, CovenantService } from '../../../services/covenant.service';
 import { NzDropdownModule } from 'ng-zorro-antd/dropdown';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { RouterModule } from '@angular/router';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   standalone: true,
   selector: 'app-covenants',
-  imports: [CommonModule, NzDropdownModule, NzIconModule, RouterModule],
+  imports: [CommonModule, NzDropdownModule, NzIconModule, RouterModule, NzSelectModule, FormsModule],
   templateUrl: './covenants.html',
   styleUrls: ['./covenants.scss'],
 })
@@ -22,6 +24,8 @@ export class Covenants {
   covenants = signal<Covenant[]>([]);
   selectedCovenant = signal<Covenant | null>(null);
   selectedContent = signal<SafeHtml | null>(null);
+  sections = signal<{ id: string, html: string }[]>([]);
+  selectedSectionIndex = signal<number | null>(null);
 
   constructor() {
     effect(() => {
@@ -41,6 +45,9 @@ export class Covenants {
   selectCovenant(covenant: Covenant): void {
     this.selectedCovenant.set(covenant);
     this.loadContentForCovenant(covenant);
+
+    this.sections.set([]);
+    this.selectedSectionIndex.set(null);
   }
 
   private loadContentForCovenant(covenant: Covenant): void {
@@ -48,6 +55,18 @@ export class Covenants {
       // Load external HTML file
       this.http.get(covenant.descriptionUrl, { responseType: 'text' }).subscribe(html => {
         this.selectedContent.set(this.sanitizer.bypassSecurityTrustHtml(html));
+
+        // Split into subsections if multiple <div> blocks exist
+        const parts = html.split('</div>').filter(x => x.trim().length > 0);
+
+        if (parts.length > 1) {
+          const formatted = parts.map((block, i) => ({
+            id: String.fromCharCode(97 + i),
+            html: block + '</div>'
+          }))
+          this.sections.set(formatted);
+          this.selectedSectionIndex.set(0); // default to first section
+        }
       });
     } else {
       // Use inline description
