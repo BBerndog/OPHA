@@ -7,5 +7,6 @@ export const routes: Routes = [
   { path: 'restrictions', loadComponent: () => import('./pages/restrictions/restrictions').then(m => m.Restrictions) },
   { path: 'about', loadComponent: () => import('./pages/about/about').then(m => m.About) },
   { path: 'news', loadComponent: () => import('./pages/news/news').then(m => m.News) },
-  { path: 'info', loadComponent: () => import('./pages/info/info').then(m => m.Info) }
+  { path: 'info', loadComponent: () => import('./pages/info/info').then(m => m.Info) },
+  { path: 'contact', loadComponent: () => import('./pages/contact/contact').then(m => m.Contact) }
 ];
