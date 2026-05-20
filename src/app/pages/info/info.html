@@ -95,6 +95,46 @@
     </ng-template>
   </ng-container>
   <ng-template #htmlContent>
-    <div *ngIf="selectedContent" [innerHTML]="selectedContent"></div>
+    <div *ngIf="selectedIndex === 1" class="static-detail">
+			<div class="page-wrapper">
+				<a href="https://www.wm.com/us/en/location/in/danville" class="bottom-center-link" target="_blank" rel="noopener">
+					<div class="bottom-center-box">
+						<img src="wasteManagement.png" class="box-image" alt="Example">
+						<div class="box-text">
+							<p>Waste Management</p>
+							<p>123 Twin Bridges Road</p>
+							<p>Danville, Indiana 46122</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="item-header">
+        <div class="item-title">Trash Schedule</div>
+        <div class="item-description">Trash is collected weekly on Tuesdays. Please place bins at the curb by 7:00 AM on the pickup day.</div>
+      </div>
+			<div class="item-header">
+        <div class="item-title">Heavy Trash Days</div>
+        <div class="item-description">Please check the <a href="/calendar">calendar</a> for specific date and times for heavy trash days.</div>
+				<div class="item-description">For more information, please visit the <a href="https://www.townofplainfield.com/1539/News">Plainfield Heavy Trash Day</a> web page.</div>
+      </div>
+    </div>
+    <div *ngIf="selectedIndex === 2" class="static-detail">
+			<div class="page-wrapper">
+				<a href="https://www.townofplainfield.com/" class="bottom-center-link" target="_blank" rel="noopener">
+					<div class="bottom-center-box-plainfield">
+						<img src="plainfield.png" class="box-image" alt="Example">
+						<div class="box-text-plainfield">
+							<p>Town of Plainfield</p>
+							<p>206 W. Main Street</p>
+							<p>Plainfield, IN 46168</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="item-header">
+        <div class="item-title">Town of Plainfield Ordinances</div>
+        <div class="item-description">View the Town of Plainfield ordiances through the <a href="https://codelibrary.amlegal.com/codes/plainfield/latest/overview">American Legal Publishing Corporation website</a>.</div>
+      </div>
+    </div>
   </ng-template>
 </div>

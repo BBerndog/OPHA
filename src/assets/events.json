@@ -47,5 +47,19 @@
 		"title": "Tox-Away Day",
 		"location": "West Side of Hummel Park, Plainfield",
 		"description": "Note: only waste from Hendricks County residents will be accepted."
+	},
+	{
+		"startDate": "2026-10-10T08:00:00",
+		"endDate": "2026-10-10T15:00:00",
+		"title": "Heavy Trash Day",
+		"location": "986 S. Center Street, Plainfield",
+		"description": "The Town’s Heavy Trash Days are only for the Town of Plainfield residents. Residents should bring identification with their address."
+	},
+	{
+		"startDate": "2026-10-17T08:00:00",
+		"endDate": "2026-10-17T15:00:00",
+		"title": "Heavy Trash Day",
+		"location": "986 S. Center Street, Plainfield",
+		"description": "The Town’s Heavy Trash Days are only for the Town of Plainfield residents. Residents should bring identification with their address."
 	}
 ]

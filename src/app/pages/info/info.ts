@@ -1,15 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
 
 interface InfoTab {
   name: string;
   icon: string;
-  contentUrl: string;
-  contentType?: 'html' | 'json';
+  contentType: 'json' | 'static';
 }
 
 interface MailboxItem {
@@ -38,31 +36,26 @@ interface MailboxItem {
 })
 export class Info {
   private http = inject(HttpClient);
-  private sanitizer = inject(DomSanitizer);
 
   tabs: InfoTab[] = [
     {
       name: 'Mailbox Replacement',
       icon: 'mail',
-      contentUrl: 'assets/mailbox.json',
       contentType: 'json'
     },
     {
       name: 'Trash Schedule',
       icon: 'schedule',
-      contentUrl: 'assets/info/trash-schedule.html',
-      contentType: 'html'
+      contentType: 'static'
     },
     {
       name: 'Plainfield Ordinances',
       icon: 'file-text',
-      contentUrl: 'assets/info/plainfield-ordinances.html',
-      contentType: 'html'
+      contentType: 'static'
     }
   ];
 
   selectedIndex = 0;
-  selectedContent: SafeHtml | null = null;
   mailboxItems: MailboxItem[] = [];
 
   constructor() {
@@ -85,22 +78,16 @@ export class Info {
   private loadSelectedTabContent(): void {
     const currentTab = this.selectedTab;
     if (!currentTab) {
-      this.selectedContent = null;
       this.mailboxItems = [];
       return;
     }
 
-    if (currentTab.contentType === 'json') {
-      this.http.get<MailboxItem[]>(currentTab.contentUrl).subscribe(items => {
-        this.mailboxItems = items;
-        this.selectedContent = null;
-      });
+    if (currentTab.contentType !== 'json') {
       return;
     }
 
-    this.http.get(currentTab.contentUrl, { responseType: 'text' }).subscribe(html => {
-      this.selectedContent = this.sanitizer.bypassSecurityTrustHtml(html);
-      this.mailboxItems = [];
+    this.http.get<MailboxItem[]>('assets/mailbox.json').subscribe(items => {
+      this.mailboxItems = items;
     });
   }
 }

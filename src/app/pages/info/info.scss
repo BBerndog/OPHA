@@ -73,7 +73,7 @@
 
 .item-divider {
   margin-top: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #003428;
 }
 
 .loading-message {
@@ -111,6 +111,20 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 	border: 1px solid #003428;
+	font-weight: 600;
+}
+
+.bottom-center-box-plainfield {
+  display: flex;
+  align-items: center;       /* ⭐ vertically centers image + text */
+  gap: 12px;
+
+  background: #EC1C2D;
+  padding: 10px;             /* your exact 10px margin */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	border: 1px solid #003428;
+	font-weight: 600;
 }
 
 .box-image {
@@ -125,6 +139,15 @@
   text-align: left;
   line-height: .4;          /* ⭐ small gap between lines */
 	color: #003428;
+}
+
+.box-text-plainfield {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* ⭐ vertically centers text block */
+  text-align: left;
+  line-height: .4;          /* ⭐ small gap between lines */
+	color: #fff;
 }
 
 .bottom-center-link {
