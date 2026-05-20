@@ -10,6 +10,18 @@
 
 <div class="info-content">
   <ng-container *ngIf="selectedTab?.contentType === 'json'; else htmlContent">
+		<div class="page-wrapper">
+			<a href="https://ostreetscape.com/" class="bottom-center-link" target="_blank" rel="noopener">
+				<div class="bottom-center-box">
+					<img src="otto.webp" class="box-image" alt="Example">
+					<div class="box-text">
+						<p>Otto's Streetscape Solutions</p>
+						<p>2449 East Main Street</p>
+						<p>Greenwood, Indiana 46143</p>
+					</div>
+				</div>
+			</a>
+		</div>
     <div class="mailbox-list" *ngIf="mailboxItems.length; else loading">
       <div
         class="mailbox-item"
@@ -76,18 +88,6 @@
 				<u>Notes</u>:
 				<div class="note-item">Install fee is waived if completed at same time as mailbox and/or post</div>
 				<div class="note-item">All orders are custom and payment is required at time of order. Otto's accepts: Visa, MasterCard, Checks, & Cash</div>
-			</div>
-			<div class="page-wrapper">
-				<a href="https://ostreetscape.com/" class="bottom-center-link" target="_blank" rel="noopener">
-					<div class="bottom-center-box">
-						<img src="otto.webp" class="box-image" alt="Example">
-						<div class="box-text">
-							<p>Otto's Streetscape Solutions</p>
-							<p>2449 East Main Street</p>
-							<p>Greenwood, Indiana 46143</p>
-						</div>
-					</div>
-				</a>
 			</div>
 		</div>		
     <ng-template #loading>
