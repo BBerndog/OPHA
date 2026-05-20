@@ -6,6 +6,12 @@
     "phone": "555-123-4567"
   },
 	{
+		"title": "Vice President/Board of Directors",
+		"name": "Larry Edwards",
+		"email": "",
+		"phone": ""
+	},
+	{
 		"title": "Treasurer/Board of Directors",
 		"name": "Wes Livingston",
 		"email": "",
@@ -14,12 +20,6 @@
 	{
 		"title": "Secretary/Board of Directors",
 		"name": "Linda Shore",
-		"email": "",
-		"phone": ""
-	},
-	{
-		"title": "Board of Directors",
-		"name": "Larry Edwards",
 		"email": "",
 		"phone": ""
 	},
