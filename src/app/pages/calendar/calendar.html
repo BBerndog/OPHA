@@ -5,11 +5,14 @@
       @for (event of getEventsForDate(date); track event.title) {
         <li>
           <strong>{{ event.title }}</strong><br>
-          <span>
-            {{ event.startDate | date:'h:mm a' }}
-            –
-            {{ event.endDate | date:'h:mm a' }}
-          </span>
+          <div class="location">{{ event.location }}</div>
+          <div class="time">
+            <span>
+              {{ event.startDate | date:'h:mm a' }}
+              –
+              {{ event.endDate | date:'h:mm a' }}
+            </span>
+          </div>
         </li>
       }
     </ul>

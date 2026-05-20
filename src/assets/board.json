@@ -2,25 +2,25 @@
   {
     "title": "President",
     "name": "Bill Munson",
-    "email": "bill.munson@example.com",
+    "email": "wsmunsonss@gmail.com",
     "phone": "555-123-4567"
   },
 	{
 		"title": "Vice President/Board of Directors",
 		"name": "Larry Edwards",
-		"email": "",
+		"email": "ledwards@psgcondos.com",
 		"phone": ""
 	},
 	{
 		"title": "Treasurer/Board of Directors",
 		"name": "Wes Livingston",
-		"email": "",
-		"phone": ""
+		"email": "wlivings22@yahoo.com",
+		"phone": "(317) 710-6176"
 	},
 	{
 		"title": "Secretary/Board of Directors",
 		"name": "Linda Shore",
-		"email": "",
+		"email": "theecook@gmail.com",
 		"phone": ""
 	},
 	{
@@ -32,19 +32,19 @@
 	{
 		"title": "Architectural Review Committee",
 		"name": "Brad Bernhardt",
-		"email": "",
-		"phone": ""
+		"email": "brad.bernhardt@live.com",
+		"phone": "(317) 828-2318"
 	},
 	{
 		"title": "Entrace Upkeep Committee",
-		"name": "",
-		"email": "",
+		"name": "John Norris",
+		"email": "jnorris11@indy.rr.com",
 		"phone": ""
 	},
 	{
 		"title": "Community Events Committee",
 		"name": "Donna Hall",
-		"email": "",
+		"email": "HallDonnaL@gmail.com",
 		"phone": ""
 	}
 ]
