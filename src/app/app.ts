@@ -19,20 +19,4 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })
-export class App {
-  private router = inject(Router);
-
-  constructor() {
-        this.router.events.subscribe(event => {
-      if (event instanceof NavigationStart) {
-        console.log('NAV START →', event.url);
-      } else if (event instanceof NavigationEnd) {
-        console.log('NAV END   →', event.url);
-      } else if (event instanceof NavigationCancel) {
-        console.warn('NAV CANCEL →', event.url, 'reason:', event.reason);
-      } else if (event instanceof NavigationError) {
-        console.error('NAV ERROR  →', event.url, 'error:', event.error);
-      }
-    });
-  }
-}
+export class App {}
