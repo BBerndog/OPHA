@@ -1,0 +1,72 @@
+.info-content {
+  padding: 0.75rem 0;
+}
+
+.mailbox-list {
+  display: grid;
+}
+
+.mailbox-item {
+  padding: 0.5rem 0;
+}
+
+.item-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.item-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.item-description {
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.pricing-col {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.pricing-col-heading {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.pricing-value {
+  min-width: 5.2rem;
+  text-align: right;
+	margin-right: 3rem;
+}
+
+.savings-col {
+  color: #0a5d5d;
+}
+
+.item-divider {
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.loading-message {
+  color: rgba(0, 0, 0, 0.55);
+  font-style: italic;
+}

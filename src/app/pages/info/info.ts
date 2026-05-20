@@ -9,6 +9,24 @@ interface InfoTab {
   name: string;
   icon: string;
   contentUrl: string;
+  contentType?: 'html' | 'json';
+}
+
+interface MailboxItem {
+  product: string;
+  description: string;
+  standardPricing: {
+    pickUp: number | string;
+    install: number | string;
+  };
+  exclusiveProviderPricing: {
+    pickUp: number | string;
+    install: number | string;
+  };
+  savings: {
+    pickUp: number | string;
+    install: number | string;
+  };
 }
 
 @Component({
@@ -26,22 +44,26 @@ export class Info {
     {
       name: 'Mailbox Replacement',
       icon: 'mail',
-      contentUrl: 'assets/info/mailbox-replacement.html'
+      contentUrl: 'assets/mailbox.json',
+      contentType: 'json'
     },
     {
       name: 'Trash Schedule',
       icon: 'schedule',
-      contentUrl: 'assets/info/trash-schedule.html'
+      contentUrl: 'assets/info/trash-schedule.html',
+      contentType: 'html'
     },
     {
       name: 'Plainfield Ordinances',
       icon: 'file-text',
-      contentUrl: 'assets/info/plainfield-ordinances.html'
+      contentUrl: 'assets/info/plainfield-ordinances.html',
+      contentType: 'html'
     }
   ];
 
   selectedIndex = 0;
   selectedContent: SafeHtml | null = null;
+  mailboxItems: MailboxItem[] = [];
 
   constructor() {
     this.loadSelectedTabContent();
@@ -52,15 +74,33 @@ export class Info {
     this.loadSelectedTabContent();
   }
 
+  get selectedTab(): InfoTab | undefined {
+    return this.tabs[this.selectedIndex];
+  }
+
+  trackByProduct(index: number, item: MailboxItem): string {
+    return item.product;
+  }
+
   private loadSelectedTabContent(): void {
-    const contentUrl = this.tabs[this.selectedIndex]?.contentUrl;
-    if (!contentUrl) {
+    const currentTab = this.selectedTab;
+    if (!currentTab) {
       this.selectedContent = null;
+      this.mailboxItems = [];
       return;
     }
 
-    this.http.get(contentUrl, { responseType: 'text' }).subscribe(html => {
+    if (currentTab.contentType === 'json') {
+      this.http.get<MailboxItem[]>(currentTab.contentUrl).subscribe(items => {
+        this.mailboxItems = items;
+        this.selectedContent = null;
+      });
+      return;
+    }
+
+    this.http.get(currentTab.contentUrl, { responseType: 'text' }).subscribe(html => {
       this.selectedContent = this.sanitizer.bypassSecurityTrustHtml(html);
+      this.mailboxItems = [];
     });
   }
 }

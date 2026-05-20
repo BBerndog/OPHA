@@ -46,5 +46,21 @@
 			"pickUp": 49.54,
 			"install": 59.54
 		}
+	},
+	{
+		"product": "Post Maintenance",
+		"description": "Caulk cracks + apply one coat of approved paint color",
+		"standardPricing": {
+			"pickUp": "N/A",
+			"install": 80.00
+		},
+		"exclusiveProviderPricing": {
+			"pickUp": "N/A",
+			"install": 60.00
+		},
+		"savings": {
+			"pickUp": "N/A",
+			"install": 20.00
+		}
 	}
 ]

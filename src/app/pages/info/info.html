@@ -1,13 +1,85 @@
 <div class="page-title">General Information</div>
 <nz-tabs nzType="card" [(nzSelectedIndex)]="selectedIndex" (nzSelectedIndexChange)="onTabIndexChange($event)">
-	<nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
-		<ng-template #titleTemplate>
-			<nz-icon [nzType]="tab.icon" />
-			{{ tab.name }}
-		</ng-template>
-	</nz-tab>
+  <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate">
+    <ng-template #titleTemplate>
+      <nz-icon [nzType]="tab.icon" />
+      {{ tab.name }}
+    </ng-template>
+  </nz-tab>
 </nz-tabs>
 
-<div class="info-content" *ngIf="selectedContent">
-  <div [innerHTML]="selectedContent"></div>
+<div class="info-content">
+  <ng-container *ngIf="selectedTab?.contentType === 'json'; else htmlContent">
+    <div class="mailbox-list" *ngIf="mailboxItems.length; else loading">
+      <div
+        class="mailbox-item"
+        *ngFor="let item of mailboxItems; let last = last; trackBy: trackByProduct"
+      >
+        <div class="item-header">
+          <div class="item-title">{{ item.product }}</div>
+          <div class="item-description">{{ item.description }}</div>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-col">
+            <div class="pricing-col-heading">Standard Pricing</div>
+            <div class="pricing-row">
+              <span>Pickup</span>
+              <span class="pricing-value">
+                {{ item.standardPricing.pickUp === 'N/A' ? 'N/A' : (item.standardPricing.pickUp | currency:'USD':'symbol':'1.2-2') }}
+              </span>
+            </div>
+            <div class="pricing-row">
+              <span>Install</span>
+              <span class="pricing-value">
+                {{ item.standardPricing.install === 'N/A' ? 'N/A' : (item.standardPricing.install | currency:'USD':'symbol':'1.2-2') }}
+              </span>
+            </div>
+          </div>
+
+          <div class="pricing-col">
+            <div class="pricing-col-heading">Exclusive Provider Pricing</div>
+            <div class="pricing-row">
+              <span>Pickup</span>
+              <span class="pricing-value">
+                {{ item.exclusiveProviderPricing.pickUp === 'N/A' ? 'N/A' : (item.exclusiveProviderPricing.pickUp | currency:'USD':'symbol':'1.2-2') }}
+              </span>
+            </div>
+            <div class="pricing-row">
+              <span>Install</span>
+              <span class="pricing-value">
+                {{ item.exclusiveProviderPricing.install === 'N/A' ? 'N/A' : (item.exclusiveProviderPricing.install | currency:'USD':'symbol':'1.2-2') }}
+              </span>
+            </div>
+          </div>
+
+          <div class="pricing-col savings-col">
+            <div class="pricing-col-heading">Savings</div>
+            <div class="pricing-row">
+              <span>Pickup</span>
+              <span class="pricing-value">
+                {{ item.savings.pickUp === 'N/A' ? 'N/A' : (item.savings.pickUp | currency:'USD':'symbol':'1.2-2') }}
+              </span>
+            </div>
+            <div class="pricing-row">
+              <span>Install</span>
+              <span class="pricing-value">
+                {{ item.savings.install === 'N/A' ? 'N/A' : (item.savings.install | currency:'USD':'symbol':'1.2-2') }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-divider" *ngIf="!last"></div>
+      </div>
+    </div>
+
+    <ng-template #loading>
+      <div class="loading-message">Loading mailbox pricing…</div>
+    </ng-template>
+  </ng-container>
+
+  <ng-template #htmlContent>
+    <div *ngIf="selectedContent" [innerHTML]="selectedContent"></div>
+  </ng-template>
 </div>
