@@ -1,0 +1,50 @@
+[
+	{
+		"product": "Mailbox",
+		"description": "Medium T2 Standard mailbox powder‑coated Greenwood with white vinyl graphics (numbers + street name)",
+		"standardPricing": {
+			"pickUp": 112.35,
+			"install": 152.35
+		},
+		"exclusiveProviderPricing": {
+			"pickUp": 101.12,
+			"install": 131.12
+		},
+		"savings": {
+			"pickUp": 11.23,
+			"install": 21.23
+		}
+	},
+	{
+		"product": "Post",
+		"description": "Caporale 6×6 Cedar Post with custom support and 6\" side‑mounted newspaper holder painted Sagebrush",
+		"standardPricing": {
+			"pickUp": 112.35,
+			"install": 152.35
+		},
+		"exclusiveProviderPricing": {
+			"pickUp": 383.06,
+			"install": 518.06
+		},
+		"savings": {
+			"pickUp": 38.31,
+			"install": 48.31
+		}
+	},
+	{
+		"product": "Entire Unit",
+		"description": "Mailbox + Post (as listed above)",
+		"standardPricing": {
+			"pickUp": 495.41,
+			"install": 630.41
+		},
+		"exclusiveProviderPricing": {
+			"pickUp": 445.87,
+			"install": 570.87
+		},
+		"savings": {
+			"pickUp": 49.54,
+			"install": 59.54
+		}
+	}
+]

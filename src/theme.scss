@@ -41,3 +41,53 @@
 	display: block;
 	width: 100%;
 }
+
+// custom styles for price pages
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 16px;
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.grid-header {
+  font-weight: 700;
+  background: #003428;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.grid-cell {
+  background: #faf8f0;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+  font-size: 12px;
+  margin-right: 1rem;
+}
+
+.price-row span:first-child {
+  color: #003428;
+  font-weight: 500;
+}
+
+.price-row span:last-child {
+  font-weight: 600;
+  text-align: right;
+  min-width: 80px;
+}
+
+th {
+  text-align: left;
+  font-size:larger;
+  padding-right: 1rem;;
+  color: #003428;
+}

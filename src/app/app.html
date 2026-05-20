@@ -5,27 +5,60 @@
     </div>
     <div class="logo">Oak Park HOA</div>
 		<ul nz-menu nzTheme="dark" nzMode="horizontal">
-			<li nz-menu-item routerLink="/home" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="home"></span>Home</li>
-			<li nz-menu-item routerLink="/news" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="notification"></span>News</li>
-			<li nz-menu-item routerLink="/restrictions" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="file-search"></span>Covenants & Bylaws</li>
-			<li nz-submenu nzTitle="Documents" nzIcon="down">
+			<li nz-menu-item nzMatchRouter [routerLink]="['/home']" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }">
+				<span nz-icon nzType="home"></span>Home
+			</li>
+			<li nz-menu-item nzMatchRouter [routerLink]="['/news']" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }">
+				<span nz-icon nzType="notification"></span>News
+			</li>
+			<li nz-menu-item nzMatchRouter [routerLink]="['/restrictions']" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }">
+				<span nz-icon nzType="file-search"></span>Covenants & Bylaws
+			</li>
+			<li nz-submenu nzTitle="Documents" nzIcon="down" nzTrigger="click">
 				<ul>
-					<li nz-menu-item routerLink="/documents/bylaws" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="file-text"></span>Restrictive Covenants</li>
-					<li nz-menu-item routerLink="/documents/minutes" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="file-text"></span>First Covenant Amendment</li>
-					<li nz-menu-item routerLink="/documents/forms" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="file-text"></span>Bylaws</li>
-					<li nz-menu-item routerLink="/documents/other" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="file-text"></span>Rental Ban Agreement</li>
+					<li nz-menu-item>
+						<a href="/assets/pdfs/restrictive-covenants.pdf" target="_blank" (click)="$event.stopPropagation()">
+							<span nz-icon nzType="file-text"></span>
+							Restrictive Covenants
+						</a>
+					</li>
+					<li nz-menu-item>
+						<a href="/assets/pdfs/first-amendment.pdf" target="_blank" (click)="$event.stopPropagation()">
+							<span nz-icon nzType="file-text"></span>
+							First Covenant Amendment
+						</a>
+					</li>
+					<li nz-menu-item>
+						<a href="/assets/pdfs/bylaws.pdf" target="_blank" (click)="$event.stopPropagation()">
+							<span nz-icon nzType="file-text"></span>
+							Bylaws
+						</a>
+					</li>
+					<li nz-menu-item>
+						<a href="/assets/pdfs/rental-ban.pdf" target="_blank" (click)="$event.stopPropagation()">
+							<span nz-icon nzType="file-text"></span>
+							Rental Ban Agreement
+						</a>
+					</li>
 				</ul>
 			</li>
-			<li nz-menu-item routerLink="/calendar" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="calendar"></span>Calendar</li>
-			<li nz-menu-item routerLink="/info" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="info-circle"></span>General Information</li>
-			<li nz-menu-item routerLink="/contacts" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="team"></span>Contact Us</li>
-			<li nz-menu-item routerLink="/about" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }"><span nz-icon nzType="global"></span>About</li>
+			<li nz-menu-item nzMatchRouter [routerLink]="['/calendar']" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }">
+				<span nz-icon nzType="calendar"></span>Calendar
+			</li>
+			<li nz-menu-item nzMatchRouter [routerLink]="['/info']" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }">
+				<span nz-icon nzType="info-circle"></span>General Information
+			</li>
+			<li nz-menu-item nzMatchRouter [routerLink]="['/contacts']" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }">
+				<span nz-icon nzType="team"></span>Contact Us
+			</li>
+			<li nz-menu-item nzMatchRouter [routerLink]="['/about']" routerLinkActive="ant-menu-item-selected" [routerLinkActiveOptions]="{ exact: true }">
+				<span nz-icon nzType="global"></span>About
+			</li>
 		</ul>
   </nz-header>
   <nz-content style="padding: 24px;">
     <router-outlet></router-outlet>
   </nz-content>
-
   <nz-footer style="text-align: center;">
     © Oak Park HOA
   </nz-footer>
