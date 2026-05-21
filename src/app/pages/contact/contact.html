@@ -1,1 +1,19 @@
 <div class="page-title">Contact the HOA</div>
+
+<div class="heading">If there are questions, comments, or concerns for the board, please contact:</div>
+<div class="page-wrapper">
+  <div class="bottom-center-box" *ngIf="president(); else noPresident">
+    <div class="box-text-title">{{ president()?.title }}</div>
+    <div class="box-text">
+      <div>{{ president()?.name }}</div>
+      <div><a href="mailto:{{ president()?.email }}">{{ president()?.email }}</a></div>
+      <div><a href="tel:{{ president()?.phone }}">{{ president()?.phone }}</a></div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noPresident>
+  <div class="contact-empty">
+    President information is not available at this time.
+  </div>
+</ng-template>

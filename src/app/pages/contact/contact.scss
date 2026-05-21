@@ -1,0 +1,35 @@
+.heading {
+	font-weight: 700;
+}
+
+.page-wrapper {
+  display: flex;
+  justify-content: left;
+  margin-top: 1rem;          /* optional spacing above the box */
+}
+
+.bottom-center-box {
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #C9A227;
+  font-weight: 400;
+  color: #003428 !important;              /* ⭐ base dark green for everything inside */
+}
+
+.bottom-center-box a {
+  color: #003428 !important;              /* ⭐ make links dark green too */
+}
+
+.box-text-title {
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: #003428;              /* explicit for title */
+}
+
+.box-text {
+  color: #003428;              /* redundant but safe */
+  text-align: left;
+  line-height: 1.2;
+}

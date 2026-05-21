@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal, effect } from '@angular/core';
 import { BoardMember, BoardService } from '../../../services/board.service';
-import { signal, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
