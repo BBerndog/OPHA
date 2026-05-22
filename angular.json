@@ -33,6 +33,11 @@
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "/assets"
+              },
+              {
+                "glob": "web.config",
+                "input": "src",
+                "output": "/"
               }
             ],
             "styles": ["src/theme.less", "src/styles.scss"],
