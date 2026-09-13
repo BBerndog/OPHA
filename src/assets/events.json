@@ -61,5 +61,19 @@
 		"title": "Heavy Trash Day",
 		"location": "986 S. Center Street, Plainfield",
 		"description": "The Town’s Heavy Trash Days are only for the Town of Plainfield residents. Residents should bring identification with their address."
+	},
+	{
+		"startDate": "2026-09-17T18:00:00",
+		"endDate": "2026-09-17T22:00:00",
+		"title": "Quaker Days Weekend - Outdoor Movies",
+		"location": "Plainfield Friends Church lawn",
+		"description": "How to Train Your Dragon @ 6pm; Footloose @ 8pm"
+	},
+	{
+		"startDate": "2026-09-18T18:00:00",
+		"endDate": "2026-09-18T21:00:00",
+		"title": "Quaker Days Weekend - Music On Main",
+		"location": "Plainfield Friends Church",
+		"description": "Free concert featuring The American West Band and Teh Purdy Trio. Lawn opens at 5pm"
 	}
 ]

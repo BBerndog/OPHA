@@ -25,14 +25,21 @@ export class Calendar {
   }
 
   getEventsForDate(date: Date): CalendarEvent[] {
+    const day = this.getDateKey(date);
+
     return this.events().filter(event => {
-      const start = new Date(event.startDate);
-      const end = new Date(event.endDate);
-      const day = new Date(date.toISOString().split('T')[0]);
-      const startDay = new Date(start.toISOString().split('T')[0]);
-      const endDay = new Date(end.toISOString().split('T')[0]);
+      const startDay = event.startDate.slice(0, 10);
+      const endDay = event.endDate.slice(0, 10);
 
       return day >= startDay && day <= endDay;
-    })
+    });
+  }
+
+  private getDateKey(date: Date): string {
+    return [
+      date.getFullYear(),
+      String(date.getMonth() + 1).padStart(2, '0'),
+      String(date.getDate()).padStart(2, '0'),
+    ].join('-');
   }
 }

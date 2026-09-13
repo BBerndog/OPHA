@@ -11,6 +11,7 @@ import { EventService, CalendarEvent } from '../../../services/event.service';
   styleUrls: ['./future-events.scss'],
 })
 export class FutureEvents {
+  private readonly timeZone = 'America/New_York';
   private eventService = inject(EventService);
   @Input() count = 5;
   events = signal<CalendarEvent[]>([]);
@@ -28,7 +29,8 @@ export class FutureEvents {
       weekday: 'short',
       month: 'short',
       day: 'numeric',
-      year: 'numeric'
+      year: 'numeric',
+      timeZone: this.timeZone,
     });
   }
 
@@ -44,9 +46,9 @@ export class FutureEvents {
     }
 
     return (
-      new Date(start).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit'}) +
+      new Date(start).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZone: this.timeZone }) +
       ' - ' +
-      new Date(end).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
+      new Date(end).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZone: this.timeZone })
     );
   }
 }

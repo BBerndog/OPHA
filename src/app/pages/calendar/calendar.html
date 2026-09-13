@@ -8,9 +8,9 @@
           <div class="location">{{ event.location }}</div>
           <div class="time">
             <span>
-              {{ event.startDate | date:'h:mm a' }}
+              {{ event.startDate | date:'h:mm a':'America/New_York' }}
               –
-              {{ event.endDate | date:'h:mm a' }}
+              {{ event.endDate | date:'h:mm a':'America/New_York' }}
             </span>
           </div>
         </li>
